@@ -1,24 +1,2 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# NOTES
+1. In the "start a new conversation" flow, there is nothign preventing a user from starting multiple conversations with the same user, and there is nothing in the data model preventing this either. (uniqueness validations, unique indexes, etc)

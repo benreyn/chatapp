@@ -15,4 +15,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "homes#show"
+
+  resources :conversations
+  resources :users
+  resources :messages
 end

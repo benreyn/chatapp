@@ -1,0 +1,14 @@
+<% @messages.each do |message| %>
+  <div>
+    <p>From: <%= message.author.email %></p>
+    <p>Sent at: <%= message.created_at %></p>
+    <p><%= message.text %></p>
+  </div>
+<% end %>
+
+<%= form_with model: Message.new, url: messages_path do |f| %>
+  <%= f.hidden_field :conversation_id, value: @conversation.id %>
+  <%= f.text_area :text %>
+
+  <%= f.submit "Send" %>
+<% end %>

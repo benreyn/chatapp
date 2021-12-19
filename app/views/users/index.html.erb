@@ -1,0 +1,10 @@
+<p>
+  Select a user to start a new conversation
+</p>
+
+<% @users.each do |user| %>
+  <div>
+    <%= user.email %>
+    <%= button_to "Chat", { controller: :conversations, action: :create, user_id: user.id } %>
+  </div>
+<% end %>
