@@ -1,0 +1,9 @@
+<p>
+  Your active chats
+</p>
+
+<% @conversations.each do |conversation| %>
+  <div>
+    <%= link_to conversation.other_user(current_user).email, conversation %>
+  </div>
+<% end %>

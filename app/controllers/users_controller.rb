@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def index
-    @users = User.where.not(id: current_user.id)
+    @users = User.no_active_conversation_with(current_user)
   end
 end

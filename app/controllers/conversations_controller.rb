@@ -11,4 +11,8 @@ class ConversationsController < ApplicationController
     @conversation = Conversation.find(params[:id])
     @messages = @conversation.messages.order(created_at: :asc)
   end
+
+  def index
+    @conversations = current_user.conversations
+  end
 end
