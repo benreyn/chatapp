@@ -10,7 +10,7 @@ class User < ApplicationRecord
       id: 
         ConversationUser.where(
         conversation_id: user.conversations.select(:id)
-      ).select(:user_id) + [user.id]
-    )
+      ).select(:user_id)
+    ).where.not(id: user)
   }
 end
